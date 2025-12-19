@@ -1,6 +1,6 @@
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://minimart-backend-ujho.onrender.com/api'
-  : 'http://localhost:5001/api';
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:5001/api'
+  : 'https://minimart-backend-ujho.onrender.com/api';
 
 class ApiService {
   async request(endpoint, options = {}) {
