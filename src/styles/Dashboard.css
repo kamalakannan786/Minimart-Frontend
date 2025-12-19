@@ -1,0 +1,31 @@
+.dashboard {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+th {
+  background-color: lightgray;
+}
+
+a {
+  color: blue;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}

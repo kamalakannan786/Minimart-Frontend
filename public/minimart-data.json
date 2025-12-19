@@ -1,0 +1,86 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Milk",
+      "price": 65,
+      "stock": 50,
+      "category": "Dairy"
+    },
+    {
+      "id": 2,
+      "name": "Bread",
+      "price": 35,
+      "stock": 30,
+      "category": "Bakery"
+    },
+    {
+      "id": 3,
+      "name": "Eggs",
+      "price": 120,
+      "stock": 25,
+      "category": "Dairy"
+    },
+    {
+      "id": 4,
+      "name": "Apples",
+      "price": 80,
+      "stock": 100,
+      "category": "Fruits"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customerName": "John Doe",
+      "items": [
+        { "productId": 1, "quantity": 2 },
+        { "productId": 2, "quantity": 1 }
+      ],
+      "total": 795,
+      "date": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "customerName": "Jane Smith",
+      "items": [
+        { "productId": 3, "quantity": 1 },
+        { "productId": 4, "quantity": 3 }
+      ],
+      "total": 860,
+      "date": "2024-01-16"
+    }
+  ],
+  "inventory": [
+    {
+      "productId": 1,
+      "currentStock": 50,
+      "minStock": 10,
+      "maxStock": 100
+    },
+    {
+      "productId": 2,
+      "currentStock": 30,
+      "minStock": 5,
+      "maxStock": 50
+    }
+  ],
+  "billing": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "amount": 795,
+      "tax": 64,
+      "total": 859,
+      "status": "paid"
+    },
+    {
+      "id": 2,
+      "orderId": 2,
+      "amount": 860,
+      "tax": 69,
+      "total": 929,
+      "status": "pending"
+    }
+  ]
+}

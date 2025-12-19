@@ -1,0 +1,105 @@
+.about-header {
+  padding: 120px 20px 60px;
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+}
+
+.vision-section {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.vision-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vision-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.vision-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #7f8c8d;
+}
+
+.mission-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #7f8c8d;
+}
+
+.values-section {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.values-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.values-content h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.value-emoji {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.value-card p {
+  color: #7f8c8d;
+}
