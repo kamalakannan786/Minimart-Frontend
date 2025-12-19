@@ -23,8 +23,27 @@ const ProductsList = () => {
       setLoading(true)
       const response = await apiService.getProducts(selectedCategory)
       setProducts(response.products)
+      setError('')
     } catch (error) {
-      setError('Failed to fetch products')
+      console.error('API Error:', error)
+      // Fallback to static products
+      const fallbackProducts = [
+        { _id: '1', name: 'Fresh Milk', price: 65, category: 'Dairy', emoji: '🥛', description: 'Pure and fresh milk from local farms', stock: 50 },
+        { _id: '2', name: 'Whole Wheat Bread', price: 35, category: 'Bakery', emoji: '🍞', description: 'Freshly baked whole wheat bread', stock: 30 },
+        { _id: '3', name: 'Farm Fresh Eggs', price: 120, category: 'Dairy', emoji: '🥚', description: 'Free-range eggs from happy hens', stock: 100 },
+        { _id: '4', name: 'Red Apples', price: 80, category: 'Fruits', emoji: '🍎', description: 'Crisp and sweet red apples', stock: 40 },
+        { _id: '5', name: 'Bananas', price: 40, category: 'Fruits', emoji: '🍌', description: 'Ripe yellow bananas', stock: 60 },
+        { _id: '6', name: 'Basmati Rice', price: 150, category: 'Grains', emoji: '🍚', description: 'Premium quality basmati rice', stock: 25 },
+        { _id: '7', name: 'Fresh Tomatoes', price: 60, category: 'Vegetables', emoji: '🍅', description: 'Juicy red tomatoes', stock: 45 },
+        { _id: '8', name: 'Green Spinach', price: 25, category: 'Vegetables', emoji: '🥬', description: 'Fresh leafy green spinach', stock: 35 }
+      ]
+      
+      const filteredProducts = selectedCategory === 'All' 
+        ? fallbackProducts 
+        : fallbackProducts.filter(product => product.category === selectedCategory)
+      
+      setProducts(filteredProducts)
+      setError('Using demo products (API connection issue)')
     } finally {
       setLoading(false)
     }
@@ -86,15 +105,12 @@ const ProductsList = () => {
           )}
           
           {error && (
-            <div style={{ textAlign: 'center', padding: '40px', color: '#e74c3c' }}>
+            <div style={{ textAlign: 'center', padding: '10px', color: '#f39c12', fontSize: '0.9rem' }}>
               <p>{error}</p>
-              <button onClick={fetchProducts} style={{ marginTop: '10px', padding: '8px 16px', background: '#3498db', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
-                Retry
-              </button>
             </div>
           )}
           
-          {!loading && !error && (
+          {!loading && (
             <div className="products-grid">
               {products.map(product => (
                 <div 
